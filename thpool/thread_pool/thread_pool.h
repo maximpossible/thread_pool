@@ -15,6 +15,9 @@
         Например, если заранее не выделить память вектору
 */
 
+namespace thread_pool
+{
+
 struct TaskQueue
 {
     TaskQueue(std::shared_ptr<std::condition_variable>& newTaskCondition, std::shared_ptr<std::mutex> newTaskLock)
@@ -162,4 +165,6 @@ public:
     std::vector<ThreadObject> _taskExecutors;
 };
 
-#endif
+}; // thread_pool
+
+#endif // THREAD_POOL_H

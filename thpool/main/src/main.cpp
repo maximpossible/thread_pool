@@ -15,8 +15,9 @@ void SayHelloHereSum(int a, int b)
 
 int main(int argc, char** argv)
 {
-    ThreadPool pool;
+    using namespace thread_pool;
 
+    ThreadPool pool;
     pool.AddTask(SayHelloHere);
     pool.AddTask(SayHelloHere);
     pool.AddTask(SayHelloHere);
