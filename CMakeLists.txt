@@ -54,7 +54,7 @@ find_program(CPP_CHECK cppcheck)
 if(NOT CPP_CHECK)
     message(WARNING "${CPP_CHECK} not found!")
 else()
-    add_custom_target(check ${PROJECT_NAME}
+    add_custom_target(check ${UTIL_NAME}
       COMMAND ${CPP_CHECK} --suppress=missingIncludeSystem --enable=all --inconclusive --check-config ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}
     )
 endif()
@@ -64,7 +64,7 @@ find_program(DOXYGEN doxygen)
 if(NOT DOXYGEN)
     message(WARNING "${DOXYGEN} not found!")
 else()
-    add_custom_target(docs ${PROJECT_NAME}
+    add_custom_target(docs ${UTIL_NAME}
       COMMAND ${DOXYGEN} ${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/Doxyfile
     )
 endif()
