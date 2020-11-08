@@ -1,6 +1,8 @@
 #include <thpool/thread_pool/thread_pool.h>
+
 #include <iostream>
 #include <chrono>
+#include <thread>
 
 void SayHelloHere()
 {
@@ -13,7 +15,7 @@ void SayHelloHereSum(int a, int b)
     std::cout << "Hello here sum: " << a + b << std::endl;
 }
 
-int main(int argc, char** argv)
+int main()
 {
     using namespace thread_pool;
 
